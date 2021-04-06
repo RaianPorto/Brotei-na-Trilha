@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
+        <script src="https://kit.fontawesome.com/99a90278fd.js" crossorigin="anonymous"></script>
+        <title>Brotei na trilha</title>
+    </head>
+    <body>
+        <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+        <header>
+            <a href="index.html" class="logo">Brotei na Trilha</a>
+			<div class="menu"><i class="fas fa-bars"></i></div>
+			<ul class="menuWide">
+				<li><a href="#inicial" onclick="mostraInicial()"><div class="menuBotao">Página Inicial</div></a></li>
+				<li>
+					<a href="#trilhas" onclick="mostraTrilhas()"><div class="menuBotao">Trilhas</div></a>
+					<ul id="menuTrilhas">
+						<li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="Pedra_da_Gávea.jpg"></a></li>
+						<li><a href="#modalPedraBonita" onclick="iniciaModal('modalPedraBonita')"><img src="Pedra_da_Gávea.jpg"></a></li>
+						<li><a href="#modalPedradoTelegrafo" onclick="iniciaModal('modalPedradoTelegrafo')"><img src=""></a></li>
+						<!-- <li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li>
+						<li><a href=""><img src=""></a></li> -->
+					</ul>
+				</li>
+				<li><a href="#niveis" onclick="mostraNiveis()"><div class="menuBotao">Nível de Dificuldade</div></a></li>
+			</ul>
+        </header>
+        <main>
+            <div id="inicial" class="container">
+                <div class="textBox">
+                    <h2 class="tracking-in-expand-fwd">Quem Somos?</h2>
+                    <p>Somos um grupo de amigos apaixonados pela natureza buscando sempre estar em contato com ela atraves da realizações de trilhas com niveis de dificuldades para todos os tipos de pessoas. Essas trilhas são combinadas atraves de um grupo no whatsapp em que indicamos a trilha, a data, o ponto de encontro e o horário. Você pode saber mais clicando no botão abaixo ou acessando nossas redes socias na parte inferior da página.
+                    </p>
+                    <a href="#modalQuemSomos" class="btn" onclick="iniciaModal('modalQuemSomos')">Saiba Mais</a>
+                </div>
+                <div  class="videoBx">
+                    <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+                </div>
+            </div>
+        </main>
+        <!-- <main>
+            <div id="inicial">
+                <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+                <div class="textBox">
+                    <h2 class="tracking-in-expand-fwd">Quem Somos?</h2>
+                    <p>Somos um grupo de amigos apaixonados pela natureza buscando sempre estar em contato com ela atraves da realizações de trilhas com niveis de dificuldades para todos os tipos de pessoas. Essas trilhas são combinadas atraves de um grupo no whatsapp em que indicamos a trilha, a data, o ponto de encontro e o horário. Você pode saber mais clicando no botão abaixo ou acessando nossas redes socias na parte inferior da página.
+                    </p>
+                    <a href="#modalQuemSomos" class="btn" onclick="iniciaModal('modalQuemSomos')">Saiba Mais</a>
+                </div>
+                <div  class="videoBx">
+                    <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+                </div>
+            </div>
+        </main> -->
+        <footer>
+			<ul >
+				<span>© Copyright 2021 - Todos os direitos reservados. Desenvolvido por RPVTech.</span>
+				<li><a href="https://instagram.com/brotei_na_trilha?igshid=gp2nme2adm5t" class="insta" target="_blank"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://chat.whatsapp.com/EV2iksmXt0E4YpKCILbW9C" class="whats" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCcn7r49oMmygN-fuA3LPj4A" class="youtu" target="_blank"><i class="fab fa-youtube"></i></a></li>
+			</ul>
+        </footer>
+    </body>
+</html>

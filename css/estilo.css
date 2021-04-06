@@ -1,0 +1,270 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    max-height: 100vh;
+    z-index: -1;
+	background: #111;
+}
+
+body:before{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 400px;
+	height: 100%;
+    z-index: -1;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+body video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.1;
+	pointer-events: none;
+}
+
+/* ============================== INICIO HEADER ============================== */
+
+header{
+    min-height: 10vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	z-index: 1;
+}
+
+header .logo{
+	position: relative;
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background: -webkit-linear-gradient(#34af23, #228B22, #006600);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+header .menu{
+	max-width: 60px;
+	cursor: pointer;
+}
+
+header .menu i{
+	display: none;
+	max-width: 100%;
+	color: #fff;
+	cursor: pointer;
+}
+
+.menuWide{
+	display: inline-flex;
+	list-style: none;
+	text-transform: uppercase;
+}
+
+.menuBotao{
+	padding: 10px;
+	margin: 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	height: 50px;
+	font-weight: 700;
+}
+
+.menuBotao:hover{
+	text-decoration: underline overline #006600 double 5px;
+}
+
+.menuWide li{
+	margin: 0 10px;
+}
+
+#menuTrilhas{
+	margin: 0;
+	height: 90px;
+	visibility: hidden;
+	position: absolute;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	top: 65%;
+	left: 20%;
+}
+
+li:hover #menuTrilhas{
+	visibility: visible;
+}
+
+#menuTrilhas img{
+	width: 80px;
+	height: 80px;
+	margin: 2.5px 5px;
+	border: 2px solid #fff;
+}
+
+#menuTrilhas img:hover{
+	width: 100px;
+	height: 100px;
+}
+
+/* ============================== FIM HEADER ============================== */
+
+
+/* ============================== INICIO MAIN ============================== */
+#inicial div{
+display: inline-block;
+}
+
+main{
+    margin: 0;
+    max-width: 100vw;
+    position: relative;
+	min-height: 70vh;
+}
+
+.container{
+    padding: 0 100px;
+    height: 400px;
+    max-height: 70vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.textBox{
+    max-height: 70vh;
+    overflow-x: hidden;
+    margin-right: 50px;
+    width: 50%;
+}
+
+.textBox h2{
+	color: #fff;
+	font-size: 3em;
+    margin-bottom: 25px;
+}
+
+.textBox p{
+	color: #fff;
+	font-size: 1.1em;
+	margin: 5px 0 25px;
+}
+
+.textBox a{
+	width: 200px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	padding: 15px 25px;
+	margin: 25px 35%;
+	font-size: 1.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	background: linear-gradient(#34af23, #228B22, #006600);
+	transition: box-shadow 0.2s ease;
+}
+
+.textBox a:hover{
+	box-shadow: 1px 1px 25px 1px #006600;
+}
+
+.videoBx{
+    margin-left: 50px;
+    width: 50%;
+    height: 400px;
+    background: #fff;
+}
+
+/* ============================== FIM MAIN ============================== */
+
+
+/* ============================== INICIO FOOTER ============================== */
+
+footer{
+    max-height: 10vh;
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	z-index: 1000;
+}
+
+footer ul{
+	bottom: 20px; 
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+span{
+	margin-right: 45vw;
+	font-size: 12px;
+	color: #fff;
+}
+
+footer ul li{
+	list-style: none;
+}
+
+footer ul li a{
+	display: inline-block;
+	margin-right: 25px; 
+}
+
+.insta, .whats, .youtu{
+	background: -webkit-linear-gradient(#34af23, #228B22, #006600);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.insta:hover{
+	background: -webkit-linear-gradient(#8A2387, #E94057, #F27121);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.whats:hover{
+	background: -webkit-linear-gradient(#075e54, #128c7e, #25d366);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.youtu:hover{
+	background: -webkit-linear-gradient(#bb0000, #ff0000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* ============================== FIM FOOTER ============================== */
