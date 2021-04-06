@@ -7,6 +7,39 @@
         <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
         <script src="https://kit.fontawesome.com/99a90278fd.js" crossorigin="anonymous"></script>
         <title>Brotei na trilha</title>
+        <script type="text/javascript">
+			
+			function mostraInicial(){
+				document.getElementById('inicial').style.display = 'flex';
+				document.getElementById('trilhas').style.display = 'none';
+				document.getElementById('niveis').style.display = 'none';
+			}
+
+			function mostraTrilhas(){
+				document.getElementById('inicial').style.display = 'none';
+				document.getElementById('trilhas').style.display = 'flex';
+				document.getElementById('niveis').style.display = 'none';
+			}		
+			
+			function mostraNiveis(){
+				document.getElementById('inicial').style.display = 'none';
+				document.getElementById('trilhas').style.display = 'none';
+				document.getElementById('niveis').style.display = 'flex';
+			}
+
+			function iniciaModal(modalID){
+				const modal = document.getElementById(modalID);
+				modal.classList.add('mostrar');
+
+				modal.addEventListener('click', (e) => {
+					console.log(e.target.id);
+					if(e.target.id == modalID || e.target.className == 'close'){
+						modal.classList.remove('mostrar');
+					}
+				});
+				
+			}
+		</script>
     </head>
     <body>
         <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
@@ -21,13 +54,6 @@
 						<li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="Pedra_da_Gávea.jpg"></a></li>
 						<li><a href="#modalPedraBonita" onclick="iniciaModal('modalPedraBonita')"><img src="Pedra_da_Gávea.jpg"></a></li>
 						<li><a href="#modalPedradoTelegrafo" onclick="iniciaModal('modalPedradoTelegrafo')"><img src=""></a></li>
-						<!-- <li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li> -->
 					</ul>
 				</li>
 				<li><a href="#niveis" onclick="mostraNiveis()"><div class="menuBotao">Nível de Dificuldade</div></a></li>
@@ -45,21 +71,30 @@
                     <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
                 </div>
             </div>
-        </main>
-        <!-- <main>
-            <div id="inicial">
-                <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+            <div id="trilhas" class="container">
                 <div class="textBox">
-                    <h2 class="tracking-in-expand-fwd">Quem Somos?</h2>
-                    <p>Somos um grupo de amigos apaixonados pela natureza buscando sempre estar em contato com ela atraves da realizações de trilhas com niveis de dificuldades para todos os tipos de pessoas. Essas trilhas são combinadas atraves de um grupo no whatsapp em que indicamos a trilha, a data, o ponto de encontro e o horário. Você pode saber mais clicando no botão abaixo ou acessando nossas redes socias na parte inferior da página.
-                    </p>
-                    <a href="#modalQuemSomos" class="btn" onclick="iniciaModal('modalQuemSomos')">Saiba Mais</a>
+                    <h2>Trilhas</h2>
+                    <p>Se você acha que trilhar é coisa para profissionais de caminhada, você está enganado(a). Aqui você encontra trilhas para quem não tem o costume de exercer a atividade e para pessoas com certa experiência em trekking(Caminhada) obtendo informações detalhadas de trilhas localizadas no estado do Rio de Janeiro atualizadas constantemente, desde as mais dificeis até as mais faceis. Trilhas que dão acesso a picos, pedras, praias, cachoeiras e até trilhas com acesso aos principais pontos turísticos da cidade maravilhosa.</p>
+                    <a href="#" class="btn" onclick="iniciaModal('modalTrilhas')">Ver Trilhas</a>
                 </div>
                 <div  class="videoBx">
-                    <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
+                    <video src="" muted autoplay loop type="mp4"></video>
                 </div>
             </div>
-        </main> -->
+            <div id="niveis" class="container">
+                <div class="textBox">
+                    <h2>Dificuldade</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a href="#modalNivelDificuldades" class="btn" onclick="iniciaModal('modalNivelDificuldades')">Ver Níveis</a>
+                </div>
+                <div  class="videoBx">
+                    <video src="" muted autoplay loop type="mp4"></video>
+                </div>
+            </div>
+        </main>
         <footer>
 			<ul >
 				<span>© Copyright 2021 - Todos os direitos reservados. Desenvolvido por RPVTech.</span>
