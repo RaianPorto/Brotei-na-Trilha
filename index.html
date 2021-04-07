@@ -45,19 +45,23 @@
         <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
         <header>
             <a href="index.html" class="logo">Brotei na Trilha</a>
-			<div class="menu"><i class="fas fa-bars"></i></div>
-			<ul class="menuWide">
-				<li><a href="#inicial" onclick="mostraInicial()"><div class="menuBotao">Página Inicial</div></a></li>
-				<li>
-					<a href="#trilhas" onclick="mostraTrilhas()"><div class="menuBotao">Trilhas</div></a>
-					<ul id="menuTrilhas">
-						<li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="Pedra_da_Gávea.jpg"></a></li>
-						<li><a href="#modalPedraBonita" onclick="iniciaModal('modalPedraBonita')"><img src="Pedra_da_Gávea.jpg"></a></li>
-						<li><a href="#modalPedradoTelegrafo" onclick="iniciaModal('modalPedradoTelegrafo')"><img src=""></a></li>
-					</ul>
-				</li>
-				<li><a href="#niveis" onclick="mostraNiveis()"><div class="menuBotao">Nível de Dificuldade</div></a></li>
-			</ul>
+            <nav>
+                <!-- <div class="menu"><i class="fas fa-bars"></i></div> -->
+                <ul>
+                    <li><a href="#inicial" onclick="mostraInicial()"><div class="itemMenu">Página Inicial</div></a></li>
+                    <li>
+                        <a href="#trilhas" onclick="mostraTrilhas()"><div class="itemMenu">Trilhas</div></a>
+                        <ul id="menuTrilhas">
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
+                            <!-- <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#niveis" onclick="mostraNiveis()"><div class="itemMenu">Nível de Dificuldade</div></a></li>
+                    <!-- <li><a href="#"><div class="itemMenu">+</div></a></li> -->
+                </ul>
+            </nav>
         </header>
         <main>
             <div id="inicial" class="container">
@@ -103,5 +107,109 @@
 				<li><a href="https://www.youtube.com/channel/UCcn7r49oMmygN-fuA3LPj4A" class="youtu" target="_blank"><i class="fab fa-youtube"></i></a></li>
 			</ul>
         </footer>
+        <div id="modalQuemSomos" class="modal-container">
+			<div class="modal">
+				<div class="cabecalho">
+					<div class="close">x</div>
+					<h2>Quem Somos</h2>
+				</div>
+				<hr>
+				<p>
+					Antes de mais nada, devemos deixar bem claro aqui que não há nenhum profissional guiando em nossas trilhas e por isso não é cobrado nada para aqueles que queiram participar. Como dito na apresentação inicial realizamos as trilhas com o objetivo de proporcionar lazer para pessoas que gostam da atividade e de se exercitar em contato com a natureza e estar disposto(a) a capturar vistas deslumbrantes. 
+					Caso não se sinta seguro(a) ou desconfortável em se juntar a nós recomendamos que busque um(a) guia profissional. Se você é um guia profissional e quer divulgar o seu trabalho sem custo algum, entre em contato conosco e disponibilizaremos o seu trabalho em nossas midias sociais. Se você busca um guia profissional <a href="#">clique aqui</a> e veja nossa lista de guias.
+				</p>
+				<p>
+					Este site tem a finalidade de descrever e detalhar trilhas localizadas no estado do Rio de Janeiro para que trilheiros e trilheiras de todo o mundo tenham melhores informações sobre as trilhas como os niveis de dificuldades para que você saiba se está apto(a) fisicamente para realizar tal trilha, como chegar ao ponto inicial das trilhas, os horarios que determinadas parques naturais estão abertos entre outras informações.
+				</p>
+
+				<h3>Nossa história</h3>
+				<p>
+					Em 2019 criamos um grupo com apenas 6 integrantes para realizar a trilha da Pedra da Tartaruga localizada em Barra de Guaratiba. Com as postagens de fotos em redes sociais muitos amigos se interessaram em se juntar a nós e com isso amigos de amigos tambem. Desde então o grupo cresceu 
+				</p>
+			</div>
+		</div>
+        <div id="modalTrilhas" class="modal-container">
+			<div class="modal">
+				<div class="cabecalho">
+					<div class="close">x</div>
+					<h2>Trilhas</h2>
+				</div>
+				<hr>
+				<p>
+					
+				</p>
+				<p>
+					
+				</p>
+			</div>
+		</div>
+        <div id="modalNivelDificuldades" class="modal-container">
+			<div class="modal">
+				<div class="cabecalho">
+					<div class="close">x</div>
+					<h2>Nível de Dificuldades</h2>
+				</div>
+				<hr>
+				<p>
+				
+				</p>
+				<p>
+					
+				</p>
+				
+			</div>
+		</div>
+
+        <div id="modalPedradaGavea" class="modal-container">
+			<div class="modal">
+				<div class="cabecalho">
+					<div class="close">x</div>
+					<h2>Trilha da Pedra da Gávea</h2>
+				</div>
+				<hr>
+				<p>
+					<br>Nível:
+					<br>Local:
+					<br>Altura: 
+					<br>Duração:
+					<br>Distância:
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+				</p>
+				<div class="video">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/5msyayGMOEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
