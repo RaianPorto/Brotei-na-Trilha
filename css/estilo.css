@@ -130,7 +130,7 @@ nav ul{
 	width: 80px;
 	height: 80px;
 	cursor: pointer;
-	transition: 00.5s;
+	transition: 0.3s;
 }
 
 #menuTrilhas img:hover{
@@ -353,6 +353,12 @@ footer ul li a{
 .modal p{
 	padding: 50px;
 	text-align: justify;
+}
+
+.video{
+	display: flex;
+	justify-content: center;
+	margin: 0px auto 100px auto;
 }
 
 @keyframes modal{
