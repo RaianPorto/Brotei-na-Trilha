@@ -214,10 +214,16 @@ main{
 }
 
 .videoBx{
+    position: relative;
     margin-left: 50px;
     width: 50%;
     height: 400px;
     background: #fff;
+    z-index: 1;
+}
+
+.videoBx video{
+	opacity: 1;
 }
 
 /* ============================== FIM MAIN ============================== */
