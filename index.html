@@ -4,30 +4,79 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
-        <script src="https://kit.fontawesome.com/99a90278fd.js" crossorigin="anonymous"></script>
-        <title>Brotei na trilha</title>
-        <script type="text/javascript">
-			
-			function mostraInicial(){
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Brotei na Trilha</title>
+
+        <script>
+
+            function onoffMenu(){
+                document.getElementById('menuTrilhas').style.display = 'none';
+                if (document.getElementById('menuPrincipal').style.display = 'none'){
+                    document.getElementById('menuPrincipal').style.display = 'block';
+                } else {
+                    document.getElementById('menuPrincipal').style.display = 'none';
+                }
+            }
+
+            function mostraInicial(){
 				document.getElementById('inicial').style.display = 'flex';
 				document.getElementById('trilhas').style.display = 'none';
 				document.getElementById('niveis').style.display = 'none';
+                if (window.screen.availWidth < 1024) {
+                    if (document.getElementById('menuPrincipal').style.display = 'block'){
+                        document.getElementById('menuPrincipal').style.display = 'none';
+                        // [TRATAR AQUI O CHECKED]
+
+                        var status = document.getElementById('check');
+                        status.checked = false;
+                    } else {
+                        document.getElementById('menuPrincipal').style.display = 'auto';
+                    }
+                } else {
+                    document.getElementById('menuPrincipal').style.display = 'block';
+                }
 			}
 
 			function mostraTrilhas(){
 				document.getElementById('inicial').style.display = 'none';
 				document.getElementById('trilhas').style.display = 'flex';
 				document.getElementById('niveis').style.display = 'none';
+                if (window.screen.availWidth < 1024) {
+                    
+                    // if(document.getElementById('checkTrilhas').click() == false){
+                    //     document.getElementById('checkTrilhas') = true;
+                    // } else {
+                    //     document.getElementById('checkTrilhas') = false;
+                    // }
+                    if (document.getElementById('menuTrilhas').style.display = 'none'){
+                        document.getElementById('menuTrilhas').style.display = 'block';
+                    } else {
+                        document.getElementById('menuTrilhas').style.display = 'none';
+                    }
+                } else {
+                    document.getElementById('menuTrilhas').style.display = 'auto';
+                }
 			}		
 			
 			function mostraNiveis(){
 				document.getElementById('inicial').style.display = 'none';
 				document.getElementById('trilhas').style.display = 'none';
 				document.getElementById('niveis').style.display = 'flex';
+                if (window.screen.availWidth < 1024) {
+                    if (document.getElementById('menuPrincipal').style.display = 'block'){
+                        document.getElementById('menuPrincipal').style.display = 'none';
+
+                        var status = document.getElementById('check');
+                        status.checked = false;
+                    } else {
+                        document.getElementById('menuPrincipal').style.display = 'auto';
+                    }
+                } else {
+                    document.getElementById('menuPrincipal').style.display = 'block';
+                }
 			}
 
-			function iniciaModal(modalID){
+            function iniciaModal(modalID){
 				const modal = document.getElementById(modalID);
 				modal.classList.add('mostrar');
 
@@ -37,78 +86,124 @@
 						modal.classList.remove('mostrar');
 					}
 				});
-				
+	
 			}
-		</script>
+
+        </script>
     </head>
     <body>
-        <!-- <video src="videoteste.mp4" muted autoplay loop type="mp4"></video> -->
         <header>
             <a href="index.html" class="logo">Brotei na Trilha</a>
-            <a href="index.html" class="logoMobile"><div></div></a>
+            <a href="index.html" class="logoMobile"><img src="img/logo-mobile2.png"></a>
+            <label for="check"><i class="fas fa-bars"></i></label>
+			<input type="checkbox" id="check" onclick="onoffMenu()">
             <nav>
-                <div class="menuMobile"><i class="fas fa-bars"></i></div>
-                <ul>
-                    <li><a href="#inicial" onclick="mostraInicial()"><div class="itemMenu">Página Inicial</div></a></li>
-                    <li>
-                        <a href="#trilhas" onclick="mostraTrilhas()"><div class="itemMenu">Trilhas</div></a>
+                <ul id="menuPrincipal">
+                    <li><a href="index.html##inicial" onclick="mostraInicial()">Página Inicial</a></li>
+                    <li><a href="index.html##trilhas" onclick="mostraTrilhas()">Trilhas</a>
                         <ul id="menuTrilhas">
-                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
-                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
-                            <!-- <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li>
-                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/imgTeste.jfif"></a></li> -->
+                            <!-- <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra da Gávea</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra Bonita</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><img src="img/Pedra da Gavea.jpg" alt="">Pedra da Tartaruga</a></li> -->
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Gávea</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra Bonita</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <li><a href="#modalPedradaGavea" onclick="iniciaModal('modalPedradaGavea')"><!--<img src="img/Pedra da Gavea.jpg" alt="">-->Pedra da Tartaruga</a></li>
+                            <!-- <li>Trilha 3</li>
+                            <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li> -->
+                            <!-- <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li>
+                            <li>Trilha 4</li>
+                            <li>Trilha 5</li>
+                            <li>Trilha 6</li> -->
                         </ul>
                     </li>
-                    <li><a href="#niveis" onclick="mostraNiveis()"><div class="itemMenu">Nível de Dificuldade</div></a></li>
-                    <!-- <li><a href="#"><div class="itemMenu">+</div></a></li> -->
+                    <li><a href="index.html##niveis" onclick="mostraNiveis()">Níveis de Dificuldades</a></li>
+                    <!-- <li><a href="index2.html##inicial" onclick="mostraInicial()">O que levar?</a></li>
+                    <li><a href="index2.html##inicial" onclick="mostraInicial()">Quem Somos</a></li> -->
                 </ul>
             </nav>
         </header>
 
         <main>
-            <div id="inicial">
-                <div class="textBox">
+            <div id="inicial" class="container">
+                <video src="img/video.mp4" muted autoplay loop type="mp4" class="video"></video>
+                <section class="left">
                     <h2>Quem Somos?</h2>
                     <p>Somos um grupo de amigos apaixonados pela natureza buscando sempre estar em contato com ela atraves da realizações de trilhas com niveis de dificuldades para todos os tipos de pessoas. Essas trilhas são combinadas atraves de um grupo no whatsapp em que indicamos a trilha, a data, o ponto de encontro e o horário. Você pode saber mais clicando no botão abaixo ou acessando nossas redes socias na parte inferior da página.
                     </p>
-                    <a href="#modalQuemSomos" class="btn" onclick="iniciaModal('modalQuemSomos')">Saiba Mais</a>
-                </div>
-                <div class="videoBx">
-                    <video src="videoteste.mp4" muted autoplay loop type="mp4"></video>
-                </div>
+                    <div class="btn">
+                        <a href="#modalQuemSomos" onclick="iniciaModal('modalQuemSomos')">Saiba Mais</a>
+                    </div>
+                </section>
+                <section class="right">
+                    <video src="img/video.mp4" muted autoplay loop type="mp4"></video>
+                </section>
             </div>
             <div id="trilhas" class="container">
-                <div class="textBox">
+                <video src="img/video.mp4" muted autoplay loop type="mp4" class="video"></video>
+                <section class="left">
                     <h2>Trilhas</h2>
-                    <p>Se você acha que trilhar é coisa para profissionais de caminhada, você está enganado(a). Aqui você encontra trilhas para quem não tem o costume de exercer a atividade e para pessoas com certa experiência em trekking(Caminhada) obtendo informações detalhadas de trilhas localizadas no estado do Rio de Janeiro atualizadas constantemente, desde as mais dificeis até as mais faceis. Trilhas que dão acesso a picos, pedras, praias, cachoeiras e até trilhas com acesso aos principais pontos turísticos da cidade maravilhosa.</p>
-                    <a href="#" class="btn" onclick="iniciaModal('modalTrilhas')">Ver Trilhas</a>
-                </div>
-                <div  class="videoBx">
+                    <p>Se você acha que trilhar é coisa para profissionais de caminhada, você está enganado(a). Aqui você encontra trilhas para quem não tem o costume de exercer a atividade e para pessoas com certa experiência em trekking (Caminhada) obtendo informações detalhadas de trilhas localizadas no estado do Rio de Janeiro atualizadas constantemente, desde as mais dificeis até as mais faceis. Trilhas que dão acesso a picos, pedras, praias, cachoeiras e até trilhas com acesso aos principais pontos turísticos da cidade maravilhosa.</p>
+                    <!-- <div class="btn">
+                        <a href="#trilhas" onclick="iniciaModal('modalTrilhas')">Ver Trilhas</a>
+                    </div> -->
+                </section>
+                <section class="right">
                     <video src="" muted autoplay loop type="mp4"></video>
-                </div>
+                </section>
             </div>
             <div id="niveis" class="container">
-                <div class="textBox">
-                    <h2>Dificuldade</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                    <a href="#modalNivelDificuldades" class="btn" onclick="iniciaModal('modalNivelDificuldades')">Ver Níveis</a>
-                </div>
-                <div  class="videoBx">
+                <video src="img/video.mp4" muted autoplay loop type="mp4" class="video"></video>
+                <section class="left">
+                    <h2>Níveis de Dificuldade</h2>
+                    <p>Distância do percurso, tempo de execução, tipo do terreno, desnível da trilha, carga a ser carregada, geografia do local, condicionamento físico do trilheiro(a), habilidades técnicas, experiência. Tudo isso e mais deve ser considerado na hora de definir o nivel de difilcudade de uma trilha e assim saber se você está preparado(a) para realizar determinada trilha. Baseando-se nesses pontos citados, em diversas publicações e experiencias adquiridas em trilhas você pode verificar se a trilha que deseja fazer está em um nivel de acordo com o seu condicionamento físico clicando no botão abaixo.</p>
+                    <div class="btn">
+                        <a href="#modalNivelDificuldades" onclick="iniciaModal('modalNiveis')">Ver Níveis</a>
+                    </div>
+                </section>
+                <section class="right">
                     <video src="" muted autoplay loop type="mp4"></video>
-                </div>
+                </section>
             </div>
         </main>
+
         <footer>
             <ul>
                 <li><a href="https://instagram.com/brotei_na_trilha?igshid=gp2nme2adm5t" class="insta" target="_blank"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="https://www.youtube.com/channel/UCcn7r49oMmygN-fuA3LPj4A" class="youtu" target="_blank"><i class="fab fa-youtube"></i></a></li>
-				<li><a href="https://chat.whatsapp.com/EV2iksmXt0E4YpKCILbW9C" class="whats" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-			</ul>
+                <li><a href="https://www.youtube.com/channel/UCcn7r49oMmygN-fuA3LPj4A" class="youtu" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://chat.whatsapp.com/EV2iksmXt0E4YpKCILbW9C" class="whats" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
             <span>© Copyright 2021 - Todos os direitos reservados. Desenvolvido por RPVTech.</span>
         </footer>
+
         <div id="modalQuemSomos" class="modal-container">
 			<div class="modal">
 				<div class="cabecalho">
@@ -130,6 +225,7 @@
 				</p>
 			</div>
 		</div>
+
         <div id="modalTrilhas" class="modal-container">
 			<div class="modal">
 				<div class="cabecalho">
@@ -138,27 +234,21 @@
 				</div>
 				<hr>
 				<p>
-					
-				</p>
-				<p>
-					
+                    
 				</p>
 			</div>
 		</div>
-        <div id="modalNivelDificuldades" class="modal-container">
+
+        <div id="modalNiveis" class="modal-container">
 			<div class="modal">
 				<div class="cabecalho">
 					<div class="close">x</div>
-					<h2>Nível de Dificuldades</h2>
+					<h2>Níveis de Dificuldades</h2>
 				</div>
 				<hr>
 				<p>
-				
+                    
 				</p>
-				<p>
-					
-				</p>
-				
 			</div>
 		</div>
 
@@ -214,7 +304,11 @@
 			</div>
 		</div>
 
-        <p class="notify">Seu dispositivo não possui a largura de tela necessária para a exibição do conteudo. Por favor, utilize um dispositivo com um tela mais largar ou use o modo horizontal do seu dispositivo!</p>
-        
+        <div class="notify">
+            <i class="fas fa-exclamation-circle"></i>
+            <h3>Seu dispositivo não possui a largura de tela necessária para a exibição do conteúdo. Por favor, utilize um dispositivo com uma tela mais largar ou use o modo horizontal do seu dispositivo!</h3>
+        </div>
+
+        <script src="https://kit.fontawesome.com/99a90278fd.js" crossorigin="anonymous"></script>
     </body>
 </html>
